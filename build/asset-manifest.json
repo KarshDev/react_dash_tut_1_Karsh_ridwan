@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.13b1f3b5.chunk.css",
+    "main.js": "/static/js/main.7c42ec85.chunk.js",
+    "main.js.map": "/static/js/main.7c42ec85.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.926ed7d0.js",
+    "runtime-main.js.map": "/static/js/runtime-main.926ed7d0.js.map",
+    "static/css/2.25b83785.chunk.css": "/static/css/2.25b83785.chunk.css",
+    "static/js/2.56eef0b3.chunk.js": "/static/js/2.56eef0b3.chunk.js",
+    "static/js/2.56eef0b3.chunk.js.map": "/static/js/2.56eef0b3.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.30ffd4a222b04338c97167f7161764e1.js": "/precache-manifest.30ffd4a222b04338c97167f7161764e1.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.25b83785.chunk.css.map": "/static/css/2.25b83785.chunk.css.map",
+    "static/css/main.13b1f3b5.chunk.css.map": "/static/css/main.13b1f3b5.chunk.css.map",
+    "static/js/2.56eef0b3.chunk.js.LICENSE.txt": "/static/js/2.56eef0b3.chunk.js.LICENSE.txt",
+    "static/media/profile.jpg": "/static/media/profile.13ef868e.jpg",
+    "static/media/solab-logo2.png": "/static/media/solab-logo2.152d4c02.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.926ed7d0.js",
+    "static/css/2.25b83785.chunk.css",
+    "static/js/2.56eef0b3.chunk.js",
+    "static/css/main.13b1f3b5.chunk.css",
+    "static/js/main.7c42ec85.chunk.js"
+  ]
+}
