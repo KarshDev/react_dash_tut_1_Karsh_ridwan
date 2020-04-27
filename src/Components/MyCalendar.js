@@ -15,8 +15,7 @@ const MyCalendar = props => (
       localizer={localizer}
       events={myEventsList}
       endAccessor="end"
-      style={{ height: 600 }}
-    />
+      />
     </div>
   </div>
 )
