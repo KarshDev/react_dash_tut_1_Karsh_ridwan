@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
   "name": "dashboard_app",
   "version": "0.1.0",
   "private": true,
@@ -35,19 +34,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-=======
-  "name": "dashboard-admin",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"
->>>>>>> 57147d14dfefad58e51fda48502d8dd93c177348
   }
 }

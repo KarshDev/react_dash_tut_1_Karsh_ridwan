@@ -12,19 +12,12 @@ html{
 }
 .main_nav{
     display: flex;
-    /* justify-content: center;
-    align-items: center; */
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 10vh;
     background-color: white
-}
-.users_logo{
-    width: 50px;
-    height: 50px;
-    border-radius: 100%
 }
 .right_nav,.left_nav{
     
@@ -43,6 +36,29 @@ html{
 flex: 1;
 }
 
-.nav_icon1{
-   font-size: 30px;
-}
+/* If the screen size is wide or more, set the font-size of <div> to */
+@media screen and (min-width: 751px) {
+    .nav_icon1{
+        font-size: 25px;
+     }
+
+     .users_logo{
+        width: 50px;
+        height: 50px;
+        border-radius: 100%
+    }
+    
+  }
+  
+  /* If the screen size is wide or less, set the font-size of <div> to */
+  @media screen and (max-width: 750px) {
+    .nav_icon1{
+        font-size: 16px;
+     }
+    
+     .users_logo{
+        width: 30px;
+        height: 30px;
+        border-radius: 100%
+    }
+  }

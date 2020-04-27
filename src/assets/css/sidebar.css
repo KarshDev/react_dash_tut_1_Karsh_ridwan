@@ -15,14 +15,13 @@
 .navLogo {
     flex: 1;
     align-self: center;
-    padding: 10px;
+    padding: 5px;
 }
 
 .logo-image{
-    padding: 15px 10px;
-    width: 80%;
-    max-height: 60px;
-    min-height: 40px;
+    padding: 5px;
+    width: 90%;
+    height: 40px;
 }
 
 .navLinks{
@@ -31,25 +30,25 @@
     flex-direction: column;
     padding-left: 10px;
     padding-right: 10px;
-    margin-bottom: 60%;
+    margin-bottom: 30%;
 }
 
 /* If the screen size is wide or more, set the font-size of <div> to */
 @media screen and (min-width: 751px) {
     div.navLinks {
-      font-size: 22px;
+      font-size: 18px;
     }
   }
   
   /* If the screen size is wide or less, set the font-size of <div> to */
   @media screen and (max-width: 750px) {
     div.navLinks {
-      font-size: 10px;
+      font-size: 8px;
     }
   }
 
 .nav_icon {
-    padding-right: 25px;
+    padding-right: 10px;
 }
 
 .link{

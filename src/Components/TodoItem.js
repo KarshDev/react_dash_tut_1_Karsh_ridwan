@@ -10,6 +10,7 @@ const TodoItem = (props) => {
                 onChange={() => props.handleChange(props.item.id)}
             />
             <p className={props.item.completed ? "strike" : ""}> {props.item.text}</p>
+            
         </div>
     )
 }

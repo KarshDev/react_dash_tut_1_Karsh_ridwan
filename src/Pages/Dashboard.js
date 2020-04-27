@@ -20,7 +20,7 @@ function Dashboard(props) {
                     className="Revenue"
                     subtitle="Total Revenue"
                     info="$12,500"
-                    icon={<AiOutlineLineChart/>}
+                    icon={<FaWallet/>}
                 />
                 <Cards 
                     className="Tasks"
@@ -32,7 +32,7 @@ function Dashboard(props) {
                     className="Reports"
                     subtitle="Reports pending"
                     info="7"
-                    icon={<FaWallet/>}
+                    icon={<AiOutlineLineChart/>}
                 />
             </div>
 

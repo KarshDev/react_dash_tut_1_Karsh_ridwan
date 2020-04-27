@@ -1,8 +1,7 @@
 .left{
-    flex: 2;
+    flex: 1;
     text-align: center;
     justify-items: center;
-    padding-top: 10px;
 }
 
 .right{
@@ -17,17 +16,17 @@
 /* If the screen size is wide or more, set the font-size of <div> to */
 @media screen and (min-width: 751px) {
     h5.subtitle{
-        font-size: 25px;
+        font-size: 16px;
     }
 
     .icon{
-        font-size: 2em;
+        font-size: 35px;
         text-align: center;
         padding-right: 5px;
     }
 
     #MainCard {
-        font-size: 30px;
+        font-size: 18px;
         border-radius: 10%;
         display: flex;
         padding: 10px;
@@ -38,17 +37,17 @@
   /* If the screen size is wide or less, set the font-size of <div> to */
   @media screen and (max-width: 750px) {
     h5.subtitle{
-        font-size: 12px;
+        font-size: 8px;
     }
 
     .icon{
-        font-size: 10px;
+        font-size: 8px;
         text-align: center;
         padding-right: 5px;
     }
 
     #MainCard {
-        font-size: 10px;
+        font-size: 8px;
         border-radius: 10%;
         display: flex;
         flex-direction: column;
