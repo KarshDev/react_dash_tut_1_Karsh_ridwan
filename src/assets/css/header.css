@@ -1,16 +1,17 @@
-
-body{
+body {
     background-color: rgb(231, 230, 230);
     margin: 0;
     padding: 0;
-    
-  
+
+
 }
-html{
+
+html {
     margin: 0;
-    padding: 0  
+    padding: 0
 }
-.main_nav{
+
+.main_nav {
     display: flex;
     position: fixed;
     top: 0;
@@ -19,46 +20,48 @@ html{
     height: 10vh;
     background-color: white
 }
-.right_nav,.left_nav{
-    
-      display: flex;  
-      justify-content: space-around;
-      align-items: center
+
+.right_nav,
+.left_nav {
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center
 }
 
-.left_nav{
-  
-   flex: 4;
+.left_nav {
+
+    flex: 4;
 }
 
-.right_nav{
+.right_nav {
 
-flex: 1;
+    flex: 1;
 }
 
 /* If the screen size is wide or more, set the font-size of <div> to */
 @media screen and (min-width: 751px) {
-    .nav_icon1{
+    .nav_icon1 {
         font-size: 25px;
-     }
+    }
 
-     .users_logo{
+    .users_logo {
         width: 50px;
         height: 50px;
         border-radius: 100%
     }
-    
-  }
-  
-  /* If the screen size is wide or less, set the font-size of <div> to */
-  @media screen and (max-width: 750px) {
-    .nav_icon1{
+
+}
+
+/* If the screen size is wide or less, set the font-size of <div> to */
+@media screen and (max-width: 750px) {
+    .nav_icon1 {
         font-size: 16px;
-     }
-    
-     .users_logo{
+    }
+
+    .users_logo {
         width: 30px;
         height: 30px;
         border-radius: 100%
     }
-  }
+}

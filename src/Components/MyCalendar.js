@@ -5,16 +5,16 @@ import myEventsList from '../assets/data/myEventsList'
 //import Title from '../Layout/Title'
 import 'react-big-calendar/lib/css/react-big-calendar.css'
 import '../assets/css/MyCalendar.css'
- 
+
 const localizer = momentLocalizer(moment)
- 
+
 const MyCalendar = props => (
   <div className="calenderLayout">
     <div className="calender">
-    <Calendar
-      localizer={localizer}
-      events={myEventsList}
-      endAccessor="end"
+      <Calendar
+        localizer={localizer}
+        events={myEventsList}
+        endAccessor="end"
       />
     </div>
   </div>

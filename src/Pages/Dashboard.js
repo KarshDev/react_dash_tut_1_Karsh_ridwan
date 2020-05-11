@@ -36,7 +36,7 @@ function Dashboard(props) {
                 />
             </div>
 
-            <div>
+            <div className="box-container">
                 <TodoList/>
             </div>                  
        </div>

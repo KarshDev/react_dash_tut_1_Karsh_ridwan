@@ -1,25 +1,25 @@
-.left{
+.left {
     flex: 1;
     text-align: center;
     justify-items: center;
 }
 
-.right{
+.right {
     flex: 1;
     justify-items: right;
 }
 
-.info{
+.info {
     font-family: 'lobster', 'Times New Roman', serif;
 }
 
 /* If the screen size is wide or more, set the font-size of <div> to */
 @media screen and (min-width: 751px) {
-    h5.subtitle{
+    h5.subtitle {
         font-size: 16px;
     }
 
-    .icon{
+    .icon {
         font-size: 35px;
         text-align: center;
         padding-right: 5px;
@@ -32,15 +32,15 @@
         padding: 10px;
         color: floralwhite;
     }
-  }
-  
-  /* If the screen size is wide or less, set the font-size of <div> to */
-  @media screen and (max-width: 750px) {
-    h5.subtitle{
+}
+
+/* If the screen size is wide or less, set the font-size of <div> to */
+@media screen and (max-width: 750px) {
+    h5.subtitle {
         font-size: 8px;
     }
 
-    .icon{
+    .icon {
         font-size: 8px;
         text-align: center;
         padding-right: 5px;
@@ -54,5 +54,4 @@
         padding: 0px;
         color: floralwhite;
     }
-  }
-
+}

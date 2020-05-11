@@ -1,94 +1,130 @@
-import React,{useState, useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import TodoItem from './TodoItem';
-import '../assets/css/TodoItem.css';
-import todosData from '../assets/data/todoData';
+import Swal from 'sweetalert2';
+import '../assets/css/Todo.css'
+import todoData from '../assets/data/todoData';
 
-const TodoList = (props)=>{
-    const [state, setState] = useState({todos:[]})
-        
-    // Method 3: Using Lifecycle hooks 
-    useEffect(()=>{
-        setState({todos:todosData});
-    },[])
+const TodoList = (props) => {
+
+    const [state, setState] = useState({ items: [] })
+    const [currentState, setCurrentState] = useState({ currentItem: [] })
 
     useEffect(() => {
-       // console.log("Loading")
-    },[state.todos])
+        setState({ items: todoData });
+    }, [])
 
-    const handleChange = (id) => {
-                const updatedTodos = state.todos.map( todo => {
-                    if (todo.id === id) {
-                        todo.completed = !todo.completed
-                    }
-                    return todo
-                })
-                setState({...state,
-                    todos: updatedTodos
-                })
-        
+    useEffect(() => {
+        setCurrentState({
+            currentItem: {
+                text: '',
+                key: '',
+                completed: false
             }
+        })
+    }, [])
 
-        return(
-            <div>
-                <div className="todo-list">
-                    {
-                        state.todos.map(item=> <TodoItem key={item.id} item={item} handleChange={handleChange}/>)
-                    }
-                </div>
-            </div>
-        )
+
+    useEffect(() => {
+        // console.log("Loading")
+    }, [state.items])
+
+    useEffect(() => {
+        // console.log("Loading")
+    }, [currentState.currentItem])
+
+    const handleChange = (e) => {
+        setCurrentState({
+            currentItem: {
+                text: e.target.value,
+                key: Date.now(),
+                completed: false
+            }
+        })
+
+        console.log(currentState.currentItem.text)
     }
 
-// class MyRequest extends React.Component { 
-//     constructor() {
-//         super()
-//         this.state = {
-//             todos: todosData
-//         }
-//         this.handleChange = this.handleChange.bind(this)
-//     }
+    const addItem = (e) => {
+        e.preventDefault();
+        const newItem = currentState.currentItem;
+        if (newItem.text !== "") {
+            const newItems = [...state.items, newItem]
+            setState({ items: newItems })
+            setCurrentState({
+                currentItem: {
+                    text: '',
+                    key: '',
+                    completed: false
+                }
+            })
+        }
+    }
 
-            // Method 1: Changing component state directly
-//     handleChange(id) {
-//         const updatedTodos = this.state.todos.map( todo => {
-//             if (todo.id === id) {
-//                 todo.completed = !todo.completed
-//             }
-//             return todo
-//         })
-//         this.setState({
-//             todos: updatedTodos
-//         })
+    const deleteItem = (key) => {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.value) {
+                const filteredItems = state.items.filter(item => item.key !== key);
+                setState({
+                    items: filteredItems
+                })
 
-//     }
+                Swal.fire({
+                    title: 'Removedfrom list',
+                    icon: 'success',
+                    showClass: {
+                        popup: 'animated fadeInDown faster'
+                    },
+                    hideClass: {
+                        popup: 'animated fadeOutUp faster'
+                    }
+                })
+            }
+        })
 
-            // Method 2: Initialising Prevstate to keep status of current state and prevent changing the component state directly
 
-//     // handleChange(id) {
-//     //     this.setState(prevState => {
-//     //         const updatedTodos = prevState.todos.map( todo => {
-//     //             if (todo.id === id) {
-//     //                 todo.completed = !todo.completed
-//     //             }
-//     //             return prevState.todo
-//     //         })
-//     //         return {
-//     //             todos: updatedTodos
-//     //         }
-//     //    })
-//     // }
+    }
 
-//     render() {
-//          const todoItem = this.state.todos.map(item => <TodoItem key={item.id} item={item} handleChange={this.handleChange}/>)
-//         return (
-//             <div>
-//                 <h1>Request</h1>
-//                 <div className="todo-list">
-//                     {todoItem}
-//                 </div>
-//             </div>
-//         )
-//     }
-// }
+    const setUpdate = (text, key) => {
+        const items = state.items;
+        items.map(item => {
+            if (item.key === key) {
+                item.text = text
+            }
+            return items
+        })
+        setState({
+            items: items
+        })
+    }
 
-export default TodoList;
+    return (
+        <div className="request">
+            <header>
+                <form id="todoForm" onSubmit={addItem}>
+                    <input
+                        type="text"
+                        placeholder="Enter new todo"
+                        value={currentState.currentItem.text}
+                        onChange={handleChange}
+                    />
+                    <button type="submit">Add</button>
+                </form>
+            </header>
+            <TodoItem
+                items={state.items}
+                deleteItem={deleteItem}
+                setUpdate={setUpdate}
+            />
+        </div>
+    )
+}
+
+export default TodoList

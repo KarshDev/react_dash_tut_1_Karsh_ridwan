@@ -1,0 +1,88 @@
+/* Styling for Todo Item */
+
+.list {
+  color: #fff;
+  width: 300px;
+  background-color: #bf07ac;
+  height: 50px;
+  margin: 20px auto;
+  border-radius: 5px;
+}
+
+.list p {
+  padding: 10px;
+  position: relative;
+}
+
+.list p span {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+}
+
+.faicons {
+  margin: 0 5px;
+  font-size: 15px;
+}
+
+.list p input {
+  background-color: transparent;
+  border: 0;
+  color: #fff;
+  font-size: 18px;
+}
+
+.list p input:focus {
+  outline: none;
+}
+
+
+/* Styling for Todo List */
+.box-container {
+  background-color: blueviolet;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+.request {
+  background-color: #3f3160;
+  min-height: 500px;
+  width: 400px;
+  margin: 40px auto;
+}
+
+.strike {
+  text-decoration: line-through;
+  color: brown;
+}
+
+#todoForm input {
+  background-color: rgb(27, 112, 137);
+  border: 0;
+  width: 200px;
+  height: 50px;
+  padding: 0 20px;
+  margin: 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+#todoForm input::placeholder {
+  color: rgb(255, 255, 255, 0.5)
+}
+
+#todoForm input:focus {
+  outline: none;
+}
+
+#todoForm button {
+  height: 50px;
+  width: 80px;
+  border: 0;
+  background-color: rgb(202, 156, 24);
+  cursor: pointer;
+  font-weight: bolder;
+  color: #fff;
+  border-radius: 5px;
+}

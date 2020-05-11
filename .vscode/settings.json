@@ -4,5 +4,7 @@
         "formatOnPaste",
         "formatOnSave",
         "formatOnType"
-    ]
+    ],
+    "editor.formatOnSave": true,
+    "prettier.useTabs": true
 }

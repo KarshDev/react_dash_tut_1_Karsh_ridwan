@@ -1,10 +1,7 @@
-/* .MainBody{
-    margin-right: 5%;
-} */
 .subtitle {
-        font-size: 18px;
-        margin: 5px;
-        font-weight: 800;
+    font-size: 18px;
+    margin: 5px;
+    font-weight: 800;
 }
 
 .subIcon {
@@ -20,18 +17,18 @@
     padding: 10px 10px 10px 0px;
 }
 
-.Projects{
+.Projects {
     background: rgb(252, 215, 10);
 }
 
-.Revenue{
+.Revenue {
     background: rgb(202, 38, 120);
 }
 
-.Tasks{
+.Tasks {
     background: rgb(11, 11, 49);
 }
 
-.Reports{
+.Reports {
     background: rgb(64, 12, 133);
 }

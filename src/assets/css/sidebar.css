@@ -1,4 +1,4 @@
-.sidebar{
+.sidebar {
     z-index: 50;
     flex: 1;
     display: flex;
@@ -18,13 +18,13 @@
     padding: 5px;
 }
 
-.logo-image{
+.logo-image {
     padding: 5px;
     width: 90%;
     height: 40px;
 }
 
-.navLinks{
+.navLinks {
     flex: 4;
     display: flex;
     flex-direction: column;
@@ -36,30 +36,32 @@
 /* If the screen size is wide or more, set the font-size of <div> to */
 @media screen and (min-width: 751px) {
     div.navLinks {
-      font-size: 18px;
+        font-size: 18px;
     }
-  }
-  
-  /* If the screen size is wide or less, set the font-size of <div> to */
-  @media screen and (max-width: 750px) {
+}
+
+/* If the screen size is wide or less, set the font-size of <div> to */
+@media screen and (max-width: 750px) {
     div.navLinks {
-      font-size: 8px;
+        font-size: 8px;
     }
-  }
+}
 
 .nav_icon {
     padding-right: 10px;
 }
 
-.link{
+.link {
     color: orange;
     text-decoration: none;
     transition: color 1.5s;
 }
-.link:hover{
+
+.link:hover {
     color: rgb(255, 255, 255);
 }
-.linkTag:hover{
+
+.linkTag:hover {
     color: rgb(255, 255, 255)
 }
 
