@@ -32,6 +32,20 @@ const TodoList = (props) => {
         // console.log("Loading")
     }, [currentState.currentItem])
 
+    const toggleCompleted = (key) => {
+        const newCompleted = state.items.map(item => {
+            if (item.key === key) {
+                item.completed = !item.completed
+            }
+            return item
+        })
+        setState({
+            ...state,
+            items: newCompleted
+        })
+        
+}
+    
     const handleChange = (e) => {
         setCurrentState({
             currentItem: {
@@ -77,7 +91,7 @@ const TodoList = (props) => {
                 })
 
                 Swal.fire({
-                    title: 'Removedfrom list',
+                    title: 'Removed from list',
                     icon: 'success',
                     showClass: {
                         popup: 'animated fadeInDown faster'
@@ -105,26 +119,27 @@ const TodoList = (props) => {
         })
     }
 
-    return (
-        <div className="request">
-            <header>
-                <form id="todoForm" onSubmit={addItem}>
-                    <input
-                        type="text"
-                        placeholder="Enter new todo"
-                        value={currentState.currentItem.text}
-                        onChange={handleChange}
-                    />
-                    <button type="submit">Add</button>
-                </form>
-            </header>
-            <TodoItem
-                items={state.items}
-                deleteItem={deleteItem}
-                setUpdate={setUpdate}
-            />
-        </div>
-    )
+return (
+    <div className="request">
+        <header>
+            <form id="todoForm" onSubmit={addItem}>
+                <input
+                    type="text"
+                    placeholder="Enter new todo"
+                    value={currentState.currentItem.text}
+                    onChange={handleChange}
+                />
+                <button type="submit">Add</button>
+            </form>
+        </header>
+        <TodoItem
+            items={state.items}
+            deleteItem={deleteItem}
+            setUpdate={setUpdate}
+            completed={toggleCompleted}
+        />
+    </div>
+)
 }
 
 export default TodoList
